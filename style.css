@@ -1,0 +1,535 @@
+/* Importa a fonte Poppins do Google Fonts com várias variações de peso e estilo */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Define variáveis globais de cores */
+:root {
+    --color-primary-1: #fff9ea;   
+    --color-primary-2: #ffe8b4;   
+    --color-primary-3: #f8d477;   
+    --color-primary-4: #ffe100;   
+    --color-primary-5: #ffcb45;   
+    --color-primary-6: #e9a209;   
+
+    --color-neutral-0: #fff;      
+    --color-neutral-1: #1d1d1d;   
+}
+
+/* Define estilos para todos os elementos */
+* {
+    font-family: 'Poppins', sans-serif;  /* Usa a fonte Poppins como padrão */
+    margin: 0;   /* Remove margens padrão */
+    padding: 0;  /* Remove preenchimentos padrão */
+    box-sizing: border-box;  /* Define o modelo de caixa border-box */
+}
+
+/* Estilos específicos para o elemento html */
+html {
+    scroll-behavior: smooth;  /* Scroll suave */
+}
+
+/* Estilos específicos para o corpo da página */
+body {
+    background-color: var(--color-primary-1);  /* Cor de fundo definida pela variável --color-primary-1 */
+}
+
+/* Estilos para todos os elementos section */
+section {
+    padding: 28px 8%;  /* Preenchimento interno de 28px no topo e na parte inferior, 8% nas laterais */
+}
+
+/* Estilos para botões com a classe .btn-default */
+.btn-default {
+    border: none;   /* Sem borda */
+    display: flex;  /* Layout flexível */
+    align-items: center;  /* Centraliza verticalmente */
+    justify-content: center;  /* Centraliza horizontalmente */
+    background-color: var(--color-primary-5);  /* Cor de fundo definida pela variável --color-primary-5 */
+    border-radius: 12px;  /* Bordas arredondadas */
+    padding: 10px 14px;   /* Preenchimento interno */
+    font-weight: 600;   /* Peso da fonte */
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);  /* Sombra */
+    cursor: pointer;  /* Cursor apontando */
+    transition: background-color .3s ease;  /* Transição suave da cor de fundo */
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);  /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos para o grupo de botões de mídia social */
+.social-media-buttons {
+    display: flex;  /* Layout flexível */
+    gap: 18px;   /* Espaço entre os botões */
+}
+
+/* Estilos para links dentro de .social-media-buttons */
+.social-media-buttons a {
+    display: flex;  /* Layout flexível */
+    align-items: center;  /* Centraliza verticalmente */
+    justify-content: center;  /* Centraliza horizontalmente */
+    width: 45px;   /* Largura */
+    height: 40px;  /* Altura */
+    background-color: var(--color-neutral-0);  /* Cor de fundo definida pela variável --color-neutral-0 */
+    font-size: 1.25rem;  /* Tamanho da fonte */
+    border-radius: 10px;  /* Bordas arredondadas */
+    text-decoration: none;  /* Sem decoração de texto */
+    color: var(--color-neutral-1);  /* Cor do texto definida pela variável --color-neutral-1 */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);  /* Sombra */
+    transition: box-shadow .3s ease;  /* Transição suave da sombra */
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);  /* Sombra ao passar o mouse */
+}
+
+/* Estilos para o título de seção */
+.section-title {
+    color: var(--color-primary-6);  /* Cor do texto definida pela variável --color-primary-6 */
+    font-size: 1.563rem;  /* Tamanho da fonte */
+}
+
+/* Estilos para o subtítulo de seção */
+.section-subtitle {
+    font-size: 2.1875rem;  /* Tamanho da fonte */
+}
+
+header {
+    width: 100%;  /* Define a largura do elemento header como 100% da largura do seu contêiner */
+    padding: 28px 8%;  /* Define o preenchimento interno de 28px no topo e na parte inferior, 8% nas laterais */
+    position: sticky;  /* Define o posicionamento do elemento como sticky (fixo na posição especificada) */
+    top: 0;  /* Posiciona o header no topo da janela de visualização */
+    background-color: var(--color-primary-1);  /* Define a cor de fundo usando a variável --color-primary-1 */
+    z-index: 3;  /* Define o índice z (ordem de empilhamento) do elemento, permitindo que ele sobreponha outros elementos */
+}
+
+#navbar {
+    width: 100%;  /* Define a largura do elemento navbar como 100% da largura do seu contêiner */
+    display: flex;  /* Layout flexível para alinhar os itens horizontalmente */
+    align-items: center;  /* Centraliza verticalmente os itens dentro do navbar */
+    justify-content: space-between;  /* Distribui os itens com espaço igual entre eles */
+}
+
+#nav_logo {
+    font-size: 24px;  /* Define o tamanho da fonte para o logo como 24 pixels */
+    color: var(--color-primary-6);  /* Define a cor do texto usando a variável --color-primary-6 */
+}
+
+#nav_list {
+    display: flex;  /* Layout flexível para os itens da lista */
+    list-style: none;  /* Remove os marcadores de lista padrão */
+    gap: 48px;  /* Define o espaçamento entre os itens da lista */
+}
+
+.nav-item a {
+    text-decoration: none;  /* Remove a decoração de link padrão */
+    color: #1d1d1dad;  /* Define a cor do texto para os links dos itens da lista */
+    font-weight: 600;  /* Define o peso da fonte para os links dos itens da lista como negrito */
+}
+
+.nav-item.active a {
+    color: var(--color-neutral-1);  /* Define a cor do texto para o link ativo usando a variável --color-neutral-1 */
+    border-bottom: 3px solid var(--color-primary-4);  /* Adiciona uma borda inferior de 3 pixels sólidos usando a variável --color-primary-4 */
+}
+
+#mobile_btn {
+    display: none;  /* Inicialmente oculta o botão para dispositivos móveis */
+}
+
+#mobile_menu {
+    display: none;  /* Inicialmente oculta o menu móvel */
+}
+
+@media screen and (max-width: 1170px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 1170 pixels */
+
+    #nav_list,
+    #navbar .btn-default {
+        display: none;  /* Oculta a lista de navegação e todos os botões padrão no navbar */
+    }
+
+    #mobile_btn {
+        display: block;  /* Exibe o botão para dispositivos móveis */
+        border: none;  /* Remove a borda do botão */
+        background-color: transparent;  /* Define a cor de fundo como transparente */
+        font-size: 1.5rem;  /* Define o tamanho da fonte como 1.5 rem */
+        cursor: pointer;  /* Altera o cursor para indicar que o elemento é clicável */
+    }
+
+    #mobile_menu.active {
+        display: flex;  /* Exibe o menu móvel como flexível */
+        flex-direction: column;  /* Define a direção da coluna para empilhar os itens verticalmente */
+        align-items: center;  /* Centraliza os itens verticalmente dentro do menu móvel */
+    }
+
+    #mobile_nav_list {
+        display: flex;  /* Layout flexível para os itens da lista no menu móvel */
+        flex-direction: column;  /* Define a direção da coluna para empilhar os itens verticalmente */
+        gap: 12px;  /* Define o espaçamento entre os itens da lista */
+        margin: 12px 0px;  /* Define as margens superior e inferior de 12 pixels, sem margens laterais */
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;  /* Remove os marcadores de lista padrão */
+        text-align: center;  /* Centraliza horizontalmente o texto dos itens da lista */
+    } 
+}
+
+#home {
+    display: flex;  /* Define o layout flexível para o elemento #home e seus filhos */
+    min-height: calc(100vh - 91px);  /* Define a altura mínima como 100% da altura da janela de visualização menos 91 pixels */
+    position: relative;  /* Define o posicionamento como relativo para permitir posicionamento absoluto dos elementos filhos */
+}
+
+#cta {
+    width: 35%;  /* Define a largura do elemento #cta como 35% do seu contêiner */
+    display: flex;  /* Define o layout flexível para o elemento #cta e seus filhos */
+    flex-direction: column;  /* Define a direção dos elementos filhos como coluna */
+    gap: 28px;  /* Define o espaçamento entre os filhos como 28 pixels */
+    margin-top: 5%;  /* Define a margem superior como 5% do tamanho do contêiner pai */
+}
+
+#cta .title {
+    font-size: 2.5rem;  /* Define o tamanho da fonte para os elementos com a classe .title como 4 rem */
+    color: var(--color-neutral-1);  /* Define a cor do texto usando a variável --color-neutral-1 */
+}
+
+#cta .title span {
+    font-size: 3.5rem;
+    color: var(--color-primary-6);  /* Define a cor do texto dentro dos elementos <span> dentro de .title usando a variável --color-primary-6 */
+}
+
+#cta .description {
+    font-size: 1.2rem;  /* Define o tamanho da fonte para os elementos com a classe .description como 1.2 rem */
+}
+
+#cta_buttons {
+    display: flex;  /* Define o layout flexível para o elemento #cta_buttons e seus filhos */
+    gap: 24px;  /* Define o espaçamento entre os filhos como 24 pixels */
+}
+
+#cta_buttons a {
+    text-decoration: none;  /* Remove a decoração de link padrão */
+    color: var(--color-neutral-1);  /* Define a cor do texto usando a variável --color-neutral-1 */
+}
+
+#phone_button {
+    display: flex;  /* Define o layout flexível para o elemento #phone_button e seus filhos */
+    gap: 8px;  /* Define o espaçamento entre os filhos como 8 pixels */
+    align-items: center;  /* Centraliza verticalmente os itens dentro do #phone_button */
+    background-color: #ffffff;  /* Define a cor de fundo como branco */
+    padding: 8px 14px;  /* Define o preenchimento interno de 8 pixels no topo e na parte inferior, 14 pixels nas laterais */
+    font-weight: 500;  /* Define o peso da fonte como 500 (médio) */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);  /* Adiciona sombra ao elemento usando valores de sombra */
+    border-radius: 12px;  /* Define o raio do canto como 12 pixels */
+}
+
+#phone_button button {
+    box-shadow: none;  /* Remove a sombra do botão dentro de #phone_button */
+}
+
+#banner {
+    display: flex;  /* Define o layout flexível para o elemento #banner e seus filhos */
+    align-items: start;  /* Alinha os itens ao início do eixo vertical */
+    justify-content: end;  /* Alinha os itens ao final do eixo horizontal */
+    width: 70%;  /* Define a largura do elemento #banner como 70% do seu contêiner */
+    z-index: 2;  /* Define o índice z (ordem de empilhamento) do elemento */
+}
+
+#banner img {
+    height: 90%;  /* Define a altura da imagem como 100% do tamanho do seu contêiner */
+    width: max-content ;  /* Define a largura da imagem como o tamanho do conteúdo */
+    align-items: flex-start;
+}
+
+.shape {
+    background-color: var(--color-primary-2);  /* Define a cor de fundo usando a variável --color-primary-2 */
+    width: 50%;  /* Define a largura como 50% do seu contêiner */
+    height: 100%;  /* Define a altura como 100% do seu contêiner */
+    position: absolute;  /* Define o posicionamento como absoluto para posicionar em relação ao elemento pai mais próximo com posicionamento relativo */
+    border-radius: 40% 30% 0% 20%;  /* Define o raio dos cantos superior esquerdo, superior direito, inferior direito e inferior esquerdo */
+    top: 0;  /* Posiciona o elemento no topo */
+    right: 0;  /* Posiciona o elemento à direita */
+    z-index: 1;  /* Define o índice z (ordem de empilhamento) do elemento */
+}
+
+@media screen and (max-width: 1170px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 1170 pixels */
+
+    #home {
+        min-height: 100%;  /* Define a altura mínima como 100% da altura da janela de visualização */
+        padding-top: 0px;  /* Remove o preenchimento superior */
+    }
+
+    #banner,
+    #banner img,
+    #home .shape {
+        display: none;  /* Oculta o banner, a imagem do banner e o elemento com a classe .shape */
+    }
+
+    #cta {
+        width: 100%;  /* Define a largura como 100% do seu contêiner */
+        text-align: center;  /* Alinha o texto ao centro */
+        align-items: center;  /* Centraliza verticalmente os itens dentro de #cta */
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 450 pixels */
+
+    #phone_button button {
+        display: none;  /* Oculta o botão dentro de #phone_button */
+    }
+}
+
+#menu {
+    display: flex;  /* Define o layout flexível para o elemento #menu e seus filhos */
+    flex-direction: column;  /* Define a direção dos elementos filhos como coluna */
+    align-items: center;  /* Centraliza os itens ao longo do eixo transversal */
+    justify-content: center;  /* Centraliza os itens ao longo do eixo principal */
+    min-height: 100vh;  /* Define a altura mínima como 100% da altura da janela de visualização */
+}
+
+#dishes {
+    width: 100%;  /* Define a largura como 100% do seu contêiner */
+    display: flex;  /* Define o layout flexível para o elemento #dishes e seus filhos */
+    justify-content: center;  /* Centraliza os filhos ao longo do eixo principal */
+    gap: 24px;  /* Define o espaçamento entre os filhos como 24 pixels */
+    margin-top: 32px;  /* Define a margem superior como 32 pixels */
+}
+
+.dish {
+    display: flex;  /* Define o layout flexível para o elemento .dish e seus filhos */
+    flex-direction: column;  /* Define a direção dos elementos filhos como coluna */
+    align-items: center;  /* Centraliza os itens ao longo do eixo transversal */
+    border-radius: 20px;  /* Define o raio dos cantos como 20 pixels */
+    gap: 18px;  /* Define o espaçamento entre os filhos como 18 pixels */
+    width: 25%;  /* Define a largura como 25% do seu contêiner */
+    padding: 20px;  /* Define o preenchimento interno de 20 pixels */
+    background-color: var(--color-neutral-0);  /* Define a cor de fundo usando a variável --color-neutral-0 */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);  /* Adiciona sombra ao elemento usando valores de sombra */
+    position: relative;  /* Define o posicionamento como relativo para permitir posicionamento absoluto dos elementos filhos */
+    overflow: hidden;  /* Oculta o conteúdo que estiver além dos limites do elemento */
+}
+
+.dish-image{
+    max-width: 100%;
+}
+
+.dish-heart {
+    position: absolute;  /* Define o posicionamento absoluto em relação ao elemento pai */
+    background-color: var(--color-primary-6);  /* Define a cor de fundo usando a variável --color-primary-6 */
+    display: flex;  /* Define o layout flexível para o elemento .dish-heart e seus filhos */
+    align-items: center;  /* Centraliza os itens ao longo do eixo transversal */
+    justify-content: center;  /* Centraliza os itens ao longo do eixo principal */
+    font-size: 1.563rem;  /* Define o tamanho da fonte */
+    color: var(--color-primary-1);  /* Define a cor do texto usando a variável --color-primary-1 */
+    width: 70px;  /* Define a largura como 70 pixels */
+    height: 70px;  /* Define a altura como 70 pixels */
+    right: -10px;  /* Posiciona o elemento 10 pixels à direita do seu posicionamento original */
+    top: -10px;  /* Posiciona o elemento 10 pixels acima do seu posicionamento original */
+    border-radius: 0px 37.5px 0px 42.5px;  /* Define o raio dos cantos superior direito e inferior direito */
+}
+
+.dish-description {
+    color: #434343;  /* Define a cor do texto como um tom de cinza */
+    text-align: center;  /* Alinha o texto ao centro */
+}
+
+.dish-rate i {
+    color: var(--color-primary-6);  /* Define a cor do ícone usando a variável --color-primary-6 */
+}
+
+.dish-price {
+    display: flex;  /* Define o layout flexível para o elemento .dish-price e seus filhos */
+    align-items: center;  /* Centraliza os itens ao longo do eixo transversal */
+    gap: 20px;  /* Define o espaçamento entre os filhos como 20 pixels */
+}
+
+@media screen and (max-width: 1170px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 1170 pixels */
+
+    #dishes {
+        flex-wrap: wrap;  /* Permite que os elementos filhos quebrem para a próxima linha */
+        justify-content: center;  /* Centraliza os filhos ao longo do eixo principal */
+    }
+
+    .dish {
+        width: calc(50% - 12px);  /* Define a largura como metade do contêiner menos 12 pixels de margem */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 600 pixels */
+
+    .dish {
+        width: 100%;  /* Define a largura como 100% do seu contêiner */
+    }
+
+    #menu .section-subtitle {
+        text-align: center;  /* Alinha o texto ao centro */
+    }
+}
+
+footer {
+    background-color: var(--color-primary-2);  /* Define a cor de fundo do elemento footer usando a variável --color-primary-2 */
+}
+
+#footer_items {
+    display: flex;  /* Define o layout flexível para o elemento #footer_items e seus filhos */
+    justify-content: space-between;  /* Distribui os filhos igualmente ao longo do eixo principal, com espaçamento entre eles */
+    padding: 0px 8% 24px 8%;  /* Define o preenchimento interno: topo 0px, direita 8%, inferior 24px, esquerda 8% */
+    align-items: center;  /* Centraliza os itens ao longo do eixo transversal */
+}
+
+#copyright {
+    color: var(--color-neutral-1);  /* Define a cor do texto usando a variável --color-neutral-1 */
+    font-weight: 500;  /* Define o peso da fonte como 500 (semibold) */
+}
+
+@media screen and (max-width: 600px) {
+    /* Estilos aplicados quando a largura da tela for igual ou inferior a 600 pixels */
+
+    #footer_items {
+        flex-direction: column;  /* Muda a direção dos filhos para coluna */
+        gap: 20px;  /* Define o espaçamento entre os filhos como 20 pixels */
+    }
+}
+
+/* Estilo para a seção de depoimentos */
+#testimonials {
+    /* Define a altura mínima da seção como a altura total da tela menos 91px */
+    min-height: calc(100vh - 91px);
+    /* Define um layout flexível */
+    display: flex;
+    /* Centraliza os itens verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    justify-content: center;
+    /* Define um espaçamento de 48px entre os itens */
+    gap: 48px;
+}
+
+/* Estilo para a imagem do chef nos depoimentos */
+#testimonial_chef {
+    /* Define a largura da imagem */
+    width: 500px;
+    /* Define a altura da imagem como automática para manter a proporção */
+    height: auto;
+}
+
+/* Estilo para o subtítulo da seção de depoimentos */
+#testimonials .section-subtitle {
+    /* Define o tamanho da fonte */
+    font-size: 3rem;
+}
+
+/* Estilo para o conteúdo dos depoimentos */
+#testimonials_content {
+    /* Define a largura do conteúdo */
+    width: 50%;
+}
+
+/* Estilo para a lista de feedbacks */
+#feedbacks {
+    /* Define um layout flexível */
+    display: flex;
+    /* Alinha os itens em uma coluna */
+    flex-direction: column;
+    /* Define um espaçamento de 20px entre os feedbacks */
+    gap: 20px;
+    /* Define a margem inferior */
+    margin-bottom: 40px;
+    /* Define a margem superior */
+    margin-top: 30px;
+}
+
+/* Estilo para cada feedback */
+.feedback {
+    /* Define um layout flexível */
+    display: flex;
+    /* Alinha os itens no centro */
+    align-items: center;
+    /* Define um espaçamento de 20px entre os itens */
+    gap: 20px;
+    /* Define a cor de fundo */
+    background-color: var(--color-neutral-0);
+    /* Define o preenchimento interno */
+    padding: 12px;
+    /* Define o arredondamento das bordas */
+    border-radius: 12px;
+    /* Define uma sombra para a caixa */
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o avatar em cada feedback */
+.feedback-avatar {
+    /* Define a largura do avatar */
+    width: 100px;
+    /* Define a altura do avatar */
+    height: 100px;
+    /* Define o arredondamento completo das bordas para um círculo */
+    border-radius: 100%;
+    /* Faz a imagem cobrir completamente a área do avatar */
+    object-fit: cover;
+}
+
+/* Estilo para o conteúdo de texto de cada feedback */
+.feedback-content p {
+    /* Define um layout flexível */
+    display: flex;
+    /* Distribui o espaço restante de forma equitativa entre os itens */
+    justify-content: space-between;
+}
+
+/* Estilo para os elementos span dentro do parágrafo de conteúdo de feedback */
+.feedback-content p span {
+    /* Define a cor do texto */
+    color: var(--color-primary-6);
+}
+
+/* Estilos responsivos para telas com largura máxima de 1170px */
+@media screen and (max-width: 1170px) {
+    #testimonials {
+        /* Alinha os itens em uma coluna */
+        flex-direction: column;
+    }
+
+    #testimonials .section-subtitle {
+        /* Centraliza o texto */
+        text-align: center;
+        /* Reduz o tamanho da fonte */
+        font-size: 2.5rem;
+    }
+
+    #testimonial_chef {
+        /* Esconde a imagem do chef */
+        display: none;
+    }
+
+    #testimonials_content {
+        /* Aumenta a largura do conteúdo */
+        width: 70%;
+        /* Define um layout flexível em coluna */
+        display: flex;
+        /* Centraliza os itens horizontalmente */
+        align-items: center;
+    }
+}
+
+/* Estilos responsivos para telas com largura máxima de 600px */
+@media screen and (max-width: 600px) {
+    #testimonials .section-subtitle {
+        /* Reduz ainda mais o tamanho da fonte */
+        font-size: 2rem;
+    }
+
+    #testimonials_content {
+        /* Define a largura do conteúdo como 100% */
+        width: 100%;
+    }
+
+    .feedback {
+        /* Alinha os itens em uma coluna */
+        flex-direction: column;
+    }
+}
